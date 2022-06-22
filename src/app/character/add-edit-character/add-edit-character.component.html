@@ -1,0 +1,25 @@
+<form>
+    <div class="mb-3">
+        <label for="Name" class="form-label">Imie</label>
+        <input type="text" class="form-control" name="name" [(ngModel)]="name">
+    </div>
+    <div class="mb-3">
+        <label for="Name" class="form-label">Rasa</label>
+        <input type="text" class="form-control" name="race" [(ngModel)]="race">
+    </div>
+    <div class="mb-3">
+        <label for="Name" class="form-label">Klasa</label>
+        <input type="text" class="form-control" name="class" [(ngModel)]="class">
+    </div>
+    <div class="mb-3">
+        <label for="Name" class="form-label">Wiek</label>
+        <input type="number" class="form-control" name="age" [(ngModel)]="age">
+    </div>
+
+    <button (click)="addCharacter()" *ngIf="character.characterID==0" class="btn btn-primary float-end">
+        Dodaj
+    </button>
+    <button (click)="updateCharacter()" *ngIf="character.characterID!=0" class="btn btn-primary">
+        Edytuj
+    </button>
+</form>>
